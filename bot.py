@@ -44,9 +44,9 @@ def add_timestamp_to_image(input_image_path, output_image_path, font_path="arial
 
 bot = Client(name='timestamp_to_image')
 guid_bot=""
-@bot.on_message_updates(filters.text)
+@bot.on_message_updates(filters.is_private)
 async def updates(update: Updates):
-    if update.text == "start":
+    if update.text == "تایم":
         try:
          
             input_folder = "images"
